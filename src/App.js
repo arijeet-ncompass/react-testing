@@ -1,7 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from "./components/Login";
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const a = 4;
+  const b = 3;
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,11 +19,18 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn ReAct
         </a>
+        <ul>
+          <li data-testid="framework-name">React</li>
+          <li data-testid="framework-name">Angular</li>
+          <li data-testid="framework-name">Vue</li>
+        </ul>
+        <p title="sum">{a + b}</p>
+        <Login />
       </header>
     </div>
   );
-}
+};
 
 export default App;
